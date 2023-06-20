@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Theoretically should count the number of inverted numbers a[i] > a[j], where
  * i < j (see numberOfInverted() for simple example), using Divide and Conquer
  */
-final class NumberOfInverted {
+final class CountInversions {
     private static ArrayList<Integer> list;
     private static int swaps = 0;
 
