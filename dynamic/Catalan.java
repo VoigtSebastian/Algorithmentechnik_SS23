@@ -9,12 +9,15 @@ public class Catalan {
         }
     }
 
+    // Complexity of O(n^2), because both loops use O(n) operations in the
+    // worst-case
+    // Space-complexity is probably O(n+1), because of the array?
     private static int catalanDynamic(int n) {
         int[] buffer = new int[n + 1];
         buffer[0] = 1;
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++) {
+        for (int i = 1; i <= n; i++) { // O(n) - worst-case
+            for (int j = 0; j < i; j++) { // O(n) - worst-case
                 buffer[i] += buffer[j] * buffer[i - j - 1];
             }
         }
