@@ -1,5 +1,11 @@
 #! /usr/bin/env python3
 
+# In case you don't have to return a string
+# def binary(number):
+#     if number > 0:
+#         binary(number // 2)
+#         print(number % 2, end="")
+
 
 # Convert a decimal number to its binary representation as a string using divide and conquer with recursion
 def binary(number):
