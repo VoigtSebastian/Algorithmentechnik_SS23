@@ -16,9 +16,9 @@ public class Catalan {
         int[] buffer = new int[n + 1];
         buffer[0] = 1;
 
-        for (int i = 1; i <= n; i++) { // O(n) - worst-case
+        for (int i = 0; i < n; i++) { // O(n) - worst-case
             for (int j = 0; j < i; j++) { // O(n) - worst-case
-                buffer[i] += buffer[j] * buffer[i - j - 1];
+                buffer[i + 1] += buffer[j] * buffer[n - j];
             }
         }
         return buffer[n];
