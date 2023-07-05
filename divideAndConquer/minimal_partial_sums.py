@@ -11,17 +11,8 @@ def calc_sums(a, l, r):
 def sums(a):
     m = int(len(a) / 2)
 
-    if len(a) == 1:
+    if len(a) <= 1:
         return (0, 0)
-    if len(a) == 2:
-        ls = a[0]
-        rs = a[1]
-        lrs = ls + rs
-        if ls < lrs:
-            return (0, 0)
-        if rs < lrs:
-            return (1, 1)
-        return (0, 1)
 
     (ll, lr) = sums(a[0:m])
     (rl, rr) = sums(a[m : (len(a) - 1)])
