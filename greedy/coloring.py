@@ -6,20 +6,17 @@ n = len(a)
 c = [-1] * n
 
 
-def check_correct():
-    for i in range(0, n):
-        for j in range(0, n):
-            if a[i][j] == 1 and c[i] == c[j] and c[i] != -1:
-                return False
-    return True
-
-
 for i in range(0, n):
     cc = 0
     while True:
         c[i] = cc
-        if check_correct():
-            break
         cc += 1
+        color_found = True
+        for j in range(0, n):
+            if a[i][j] == 1 and c[i] == c[j] and c[i] != -1:
+                color_found = False
+                break
+        if color_found:
+            break
 
 print(c)
